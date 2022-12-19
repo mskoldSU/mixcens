@@ -78,7 +78,7 @@ summary(fit)
     ## Random effect standard deviation:  0.176 
     ## Residual standard deviation:  0.108
 
-This corresponds to an annual decrease of
+This corresponds to an annual change of
 
 ``` r
 100 * (exp(fit$beta[2]) - 1)
@@ -94,4 +94,4 @@ plot(fit) + ggplot2::labs(y = "Concentration", title = "Lindane concentration in
 
 ![](readme_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
-where censored observations are represented by vertical bars.
+where censored observations are represented by horizontal bars.
