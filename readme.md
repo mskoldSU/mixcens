@@ -9,13 +9,12 @@ This R package was constructed as a faster alternative to (now retired)
 [`lmec`](https://github.com/cran/lmec) for fitting linear mixed models
 for left-censored data, to be used for trend detection within the
 Swedish national monitoring programme for contaminants in biota. It fits
-a left-censored version of the linear mixed model $$
-y_{ij} = \alpha + \beta t_j+ b_j + \epsilon_{ij}
-$$ for replicate measurements $y_{1j}, \ldots, y_{n_jj}$ within a
-“monitoring year” $t_j$ sharing a common random effect
-$b_j\sim N(0, s^2)$ and individual effects
-$\epsilon_{ij} \sim N(0, \sigma^2)$. The fit is based on numerical
-maximization of the corresponding likelihood approximated by
+a left-censored version of the linear mixed model
+$y_{ij} = \alpha + \beta t_j+ b_j + \epsilon_{ij}$ for replicate
+measurements $y_{1j}, \ldots, y_{n_jj}$ within a “monitoring year” $t_j$
+sharing a common random effect $b_j\sim N(0, s^2)$ and individual
+effects $\epsilon_{ij} \sim N(0, \sigma^2)$. The fit is based on
+numerical maximization of the corresponding likelihood approximated by
 Gauss-Hermite quadrature.
 
 # Sample usage
@@ -94,3 +93,5 @@ plot(fit) + ggplot2::labs(y = "Concentration", title = "Lindane concentration in
 ```
 
 ![](readme_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+where censored observations are represented by vertical bars.
